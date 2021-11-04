@@ -7,25 +7,32 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import com.bumptech.glide.Glide
+import com.example.myapplication.databinding.ActivityMainBinding
 
 
 open class MainActivity : AppCompatActivity() {
 
-    private lateinit var firstButton: Button
+    private lateinit var binding: ActivityMainBinding
 
     val LOGIN: String = "admin"
     val PASSWORD: String = "admin"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        firstButton = findViewById(R.id.Fbutton)
-        firstButton.setOnClickListener{
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.Fbutton.setOnClickListener{
             val intent: Intent = Intent(this, NewActivity::class.java)
             startActivity(intent)
             intent.putExtra(LOGIN, PASSWORD)
-
         }
+
+        Glide
+            .with(this, MainActivity)
+            .load()
+            .into()
 
     }
     val test = Test()
