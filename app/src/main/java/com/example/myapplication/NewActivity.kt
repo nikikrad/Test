@@ -3,6 +3,8 @@ package com.example.myapplication
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.example.myapplication.databinding.ActivityNewBinding
 
 class NewActivity: MainActivity() {
@@ -18,7 +20,7 @@ class NewActivity: MainActivity() {
 
         super.onCreate(savedInstanceState)
         binding = ActivityNewBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_new)
+        setContentView(binding.root)
 
         val login: String? = intent.getStringExtra(LOGIN)
         val password: String? = intent.getStringExtra(PASSWORD)
@@ -29,11 +31,16 @@ class NewActivity: MainActivity() {
 //            if (login == "admin" || password == "admin") {
 //                reg()
 //            }
-            reg()
+//            reg()
+            if(binding.tvViewInfo.isInvisible)
+                binding.tvViewInfo.visibility = View.VISIBLE
+            else if (binding.tvViewInfo.isVisible)
+                binding.tvViewInfo.visibility = View.INVISIBLE
         }
     }
 
     fun reg(){
+
             binding.tvViewInfo.visibility = View.VISIBLE
     }
 

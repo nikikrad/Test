@@ -32,6 +32,8 @@ open class MainActivity : AppCompatActivity() {
 //            .load( URL("https://img3.akspic.ru/originals/2/8/8/7/4/147882-poni-rozovyj-liniya-kartinka-televideniye-750x1334.jpg"))
 //            .into()
 
+
+
     }
     val test = Test()
 
