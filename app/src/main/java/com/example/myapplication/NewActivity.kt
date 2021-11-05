@@ -33,10 +33,18 @@ class NewActivity: MainActivity() {
 //                reg()
 //            }
 //            reg()
-            if(binding.tvViewInfo.isInvisible)
+            if(binding.tvViewInfo.isInvisible) {
+                binding.btnReg.visibility = View.VISIBLE
                 binding.tvViewInfo.visibility = View.VISIBLE
-            else if (binding.tvViewInfo.isVisible)
+            }
+            else if (binding.tvViewInfo.isVisible) {
+                binding.btnReg.visibility = View.INVISIBLE
                 binding.tvViewInfo.visibility = View.INVISIBLE
+            }
+        }
+
+        binding.btnReg.setOnClickListener {
+            val intentOnRegistrat: Intent = Intent(this, FrontActivity::class.java)
         }
 
         binding.btnBack.setOnClickListener {

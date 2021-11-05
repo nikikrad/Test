@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.example.myapplication.databinding.ActivityMainBinding
 
 
@@ -36,8 +38,10 @@ open class MainActivity : AppCompatActivity() {
 //            .into()
 
         binding.btnSecret.setOnClickListener {
-            binding.secretImage.setImageDrawable(Drawable.createFromPath())
-            binding.secretImage.visibility = View.VISIBLE
+            if(binding.secretImage.isInvisible)
+                binding.secretImage.visibility = View.VISIBLE
+            else if (binding.secretImage.isVisible)
+                binding.secretImage.visibility = View.INVISIBLE
         }
 
 
