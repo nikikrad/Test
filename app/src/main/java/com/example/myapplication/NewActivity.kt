@@ -44,7 +44,8 @@ class NewActivity: MainActivity() {
         }
 
         binding.btnReg.setOnClickListener {
-            val intentOnRegistrat: Intent = Intent(this, FrontActivity::class.java)
+            val intentOnRegistr: Intent = Intent(this, FrontActivity::class.java)
+            startActivity(intentOnRegistr)
         }
 
         binding.btnBack.setOnClickListener {
