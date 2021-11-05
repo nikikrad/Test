@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -37,6 +38,13 @@ class NewActivity: MainActivity() {
             else if (binding.tvViewInfo.isVisible)
                 binding.tvViewInfo.visibility = View.INVISIBLE
         }
+
+        binding.btnBack.setOnClickListener {
+        val intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     fun reg(){

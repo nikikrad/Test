@@ -1,8 +1,11 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.core.content.ContextCompat
 import com.example.myapplication.databinding.ActivityMainBinding
 
 
@@ -32,6 +35,10 @@ open class MainActivity : AppCompatActivity() {
 //            .load( URL("https://img3.akspic.ru/originals/2/8/8/7/4/147882-poni-rozovyj-liniya-kartinka-televideniye-750x1334.jpg"))
 //            .into()
 
+        binding.btnSecret.setOnClickListener {
+            binding.secretImage.setImageDrawable(Drawable.createFromPath())
+            binding.secretImage.visibility = View.VISIBLE
+        }
 
 
     }
