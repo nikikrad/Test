@@ -3,31 +3,38 @@ package com.example.myapplication
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import androidx.core.view.isInvisible
-import androidx.core.view.isVisible
+import com.example.myapplication.databinding.ActivityNewBinding
 
 class NewActivity: MainActivity() {
-    private lateinit var square: View
-    private lateinit var view: TextView
 
+    private lateinit var binding: ActivityNewBinding
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.newactivity)
-        val LOGIN: String? = intent.extras?.getString(LOGIN)
-        val PASSWORD: String? = intent.extras?.getString(PASSWORD)
-        reg(LOGIN, PASSWORD)
+    companion object {
+        const val LOGIN : String = "LOGIN"
+        const val PASSWORD : String = "PASSWORD"
     }
 
-    fun reg(login:String? = "default", password: String? = "default"){
-        if (login == "admin" || password == "admin") {
-            view = findViewById(R.id.v_viewInfo)
-            view.isVisible
+    override fun onCreate(savedInstanceState: Bundle?) {
 
+        super.onCreate(savedInstanceState)
+        binding = ActivityNewBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_new)
+
+        val login: String? = intent.getStringExtra(LOGIN)
+        val password: String? = intent.getStringExtra(PASSWORD)
+
+        binding.logPass.text = login.toString()
+
+        binding.btnForInfo.setOnClickListener{
+//            if (login == "admin" || password == "admin") {
+//                reg()
+//            }
+            reg()
         }
+    }
 
-
+    fun reg(){
+            binding.tvViewInfo.visibility = View.VISIBLE
     }
 
 }
