@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.example.myapplication.databinding.ActivityNewBinding
@@ -45,11 +46,13 @@ class NewActivity: MainActivity() {
 
         binding.btnReg.setOnClickListener {
             val intentOnRegistr: Intent = Intent(this, FrontActivity::class.java)
+            Toast.makeText(this, "Идёшь к регистрации", Toast.LENGTH_SHORT).show()
             startActivity(intentOnRegistr)
         }
 
         binding.btnBack.setOnClickListener {
         val intent: Intent = Intent(this, MainActivity::class.java)
+
             startActivity(intent)
         }
 
