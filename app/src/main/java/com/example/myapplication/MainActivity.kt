@@ -37,11 +37,11 @@ open class MainActivity : AppCompatActivity() {
 //            .load( URL("https://img3.akspic.ru/originals/2/8/8/7/4/147882-poni-rozovyj-liniya-kartinka-televideniye-750x1334.jpg"))
 //            .into()
 
-        binding.btnSecret.setOnClickListener {
-            if(binding.secretImage.isInvisible)
-                binding.secretImage.visibility = View.VISIBLE
-            else if (binding.secretImage.isVisible)
-                binding.secretImage.visibility = View.INVISIBLE
+//        binding.btnSecret.setOnClickListener {
+//            if(binding.secretImage.isInvisible)
+//                binding.secretImage.visibility = View.VISIBLE
+//            else if (binding.secretImage.isVisible)
+//                binding.secretImage.visibility = View.INVISIBLE
         }
 
 
@@ -49,7 +49,7 @@ open class MainActivity : AppCompatActivity() {
     val test = Test()
 
 
-}
+
 
 fun Test_1(_name: String, _age: Int, _isTrue: Boolean)  : Any{
     val name = _name + "Huesos"
