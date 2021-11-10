@@ -7,12 +7,13 @@
 
 
     <TextView
-        android:textColor="#0B0505"
         android:id="@+id/tvHelloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_marginStart="120dp"
         android:text="Hello world!"
-        android:textSize="60dp"/>
+        android:textColor="#0B0505"
+        android:textSize="30dp"
+        />
 
 </FrameLayout>
