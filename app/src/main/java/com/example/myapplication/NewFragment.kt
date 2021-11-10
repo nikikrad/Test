@@ -4,10 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.myapplication.databinding.FragmentNewBinding
 
 class NewFragment:Fragment() {
+
+    private lateinit var textView: TextView
 
     private var binding: FragmentNewBinding? = null
 
@@ -18,16 +21,19 @@ class NewFragment:Fragment() {
     ): View? {
         binding = FragmentNewBinding.inflate(inflater,container,false)
         return binding?.root
+//        return inflater.inflate(R.layout.fragment_new, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
+//        textView = view.findViewById(R.id.tvHelloWorld)
+        binding!!.tvHelloWorld.text
 
     }
 
     override fun onDestroy() {
         super.onDestroy()
+
         binding = null
     }
 }
