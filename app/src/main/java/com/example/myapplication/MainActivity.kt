@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import androidx.core.content.ContextCompat
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
@@ -42,6 +43,23 @@ open class MainActivity : AppCompatActivity() {
 //                binding.secretImage.visibility = View.VISIBLE
 //            else if (binding.secretImage.isVisible)
 //                binding.secretImage.visibility = View.INVISIBLE
+
+        val workers = listOf(
+            Worker("Nikita", "Shurikov"),
+            Worker("Nikita1", "Shurikov"),
+            Worker("Nikita2", "Shurikov"),
+            Worker("Nikita3", "Shurikov"),
+            Worker("Nikita4", "Shurikov"),
+            Worker("Nikita5", "Shurikov"),
+            Worker("Nikita6", "Shurikov"),
+            Worker("Nikita7", "Shurikov"),
+            Worker("Nikita8", "Shurikov")
+        )
+
+        val myAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_2, workers)
+
+        binding.lvWorkers?.adapter = myAdapter
+
         }
 
 
