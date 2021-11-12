@@ -45,20 +45,20 @@ open class MainActivity : AppCompatActivity() {
 //                binding.secretImage.visibility = View.INVISIBLE
 
         val workers = listOf(
-            Worker("Nikita", "Shurikov"),
-            Worker("Nikita1", "Shurikov"),
-            Worker("Nikita2", "Shurikov"),
-            Worker("Nikita3", "Shurikov"),
-            Worker("Nikita4", "Shurikov"),
-            Worker("Nikita5", "Shurikov"),
-            Worker("Nikita6", "Shurikov"),
-            Worker("Nikita7", "Shurikov"),
-            Worker("Nikita8", "Shurikov")
+            "Nikita", "Shurikov",
+            "Nikita1", "Shurikov",
+            "Nikita2", "Shurikov",
+            "Nikita3", "Shurikov",
+            "Nikita4", "Shurikov",
+            "Nikita5", "Shurikov",
+            "Nikita6", "Shurikov",
+            "Nikita7", "Shurikov",
+            "Nikita8", "Shurikov"
         )
 
-        val myAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_2, workers)
+        val myAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, workers)
 
-        binding.lvWorkers?.adapter = myAdapter
+        binding.lvWorkers.adapter = myAdapter
 
         }
 
