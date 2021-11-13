@@ -1,14 +1,9 @@
 package com.example.myapplication
 
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ArrayAdapter
-import androidx.core.content.ContextCompat
-import androidx.core.view.isInvisible
-import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.databinding.ActivityMainBinding
 
 
@@ -31,7 +26,29 @@ open class MainActivity : AppCompatActivity() {
             intent.putExtra(NewActivity.LOGIN, login)
             intent.putExtra(NewActivity.PASSWORD, password)
             startActivity(intent)
+
+
         }
+
+        val workerList = listOf(
+            Worker("Nikitos", "Shurikov"),
+            Worker("Oleg", "Shurikov"),
+            Worker("Djimichu", "Shurikov"),
+            Worker("Anton", "Shurikov"),
+            Worker("CJ", "Shurikov"),
+            Worker("Nikitos", "Kopatich"),
+            Worker("Den", "Shurikov"),
+            Worker("Artem", "Shurikov"),
+            Worker("Max", "Shurikov"),
+            Worker("Nikitos", "Sinyaga"),
+            Worker("Nikitos", "Skurach"),
+            Worker("Nikitos", "Maruev"),
+
+        )
+
+        val workersAdapter = WorkersAdapter(workerList)
+        binding.rvWorkers?.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.rvWorkers.adapter = workersAdapter
 
 //        Glide
 //            .with(this)
@@ -44,26 +61,18 @@ open class MainActivity : AppCompatActivity() {
 //            else if (binding.secretImage.isVisible)
 //                binding.secretImage.visibility = View.INVISIBLE
 
-        val workers = listOf(
-            "Nikita", "Shurikov",
-            "Nikita1", "Shurikov",
-            "Nikita2", "Shurikov",
-            "Nikita3", "Shurikov",
-            "Nikita4", "Shurikov",
-            "Nikita5", "Shurikov",
-            "Nikita6", "Shurikov",
-            "Nikita7", "Shurikov",
-            "Nikita8", "Shurikov"
-        )
 
-        val myAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, workers)
+    }
 
-        binding.lvWorkers.adapter = myAdapter
-
-        }
+    override fun onDestroy() {// TODO выключить приложение при нажатии на кнопку
+        super.onDestroy()
+    }
 
 
     }
+
+
+
     val test = Test()
 
 
