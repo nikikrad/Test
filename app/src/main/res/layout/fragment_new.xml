@@ -8,12 +8,12 @@
 
     <TextView
         android:id="@+id/tvHelloWorld"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:text="Hello world!"
-        android:textColor="#0B0505"
-        android:textSize="30dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:text=""
+        android:textColor="#E11D1D"
+        android:textSize="20sp"
         />
 
 </FrameLayout>

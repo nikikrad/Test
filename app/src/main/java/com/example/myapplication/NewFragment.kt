@@ -27,9 +27,12 @@ class NewFragment:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 //        textView = view.findViewById(R.id.tvHelloWorld)
-        binding!!.tvHelloWorld.text
+        val FIO: String = "Skurak Penis"
+        binding!!.tvHelloWorld.text = FIO
 
     }
+
+
 
     override fun onDestroy() {
         super.onDestroy()

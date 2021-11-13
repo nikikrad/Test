@@ -19,6 +19,10 @@ open class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportFragmentManager.beginTransaction()
+            .replace(binding.container.id, NewFragment())
+            .addToBackStack(null)
+            .commit()
 
 
         binding.Fbutton.setOnClickListener{
