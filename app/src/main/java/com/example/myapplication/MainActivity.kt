@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.databinding.ActivityMainBinding
 
@@ -19,20 +20,26 @@ open class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportFragmentManager.beginTransaction()
-            .replace(binding.container.id, LastFragment())
-            .addToBackStack(null)
-            .commit()
+//        supportFragmentManager.beginTransaction()
+//            .replace(binding.container.id, LastFragment())
+//            .addToBackStack(null)
+//            .commit()
 
+        binding.btnAdd.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(binding.container.id, NewFragment())
+                .addToBackStack(null)
+                .commit()
+        }
 
         binding.Fbutton.setOnClickListener{
             val intent: Intent = Intent(this, NewActivity::class.java)
             intent.putExtra(NewActivity.LOGIN, login)
             intent.putExtra(NewActivity.PASSWORD, password)
             startActivity(intent)
-
-
         }
+
+        openFragment(LastFragment())
 
         val workerList = listOf(
             Worker("Nikitos", "Shurikov"),
@@ -72,6 +79,12 @@ open class MainActivity : AppCompatActivity() {
 //        super.onDestroy()
 //    }
 
+    fun openFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction()
+            .replace(binding.container.id, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
 
     }
 

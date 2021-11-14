@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.databinding.FragmentLastBinding
 import com.example.myapplication.databinding.FragmentNewBinding
 
 class NewFragment:Fragment() {
@@ -23,6 +25,10 @@ class NewFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        binding?.btn?.setOnClickListener {
+
+            (activity as? MainActivity)?.openFragment(LastFragment())
+        }
 
 
     }

@@ -23,6 +23,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="150dp"
+        android:inputType="textCapSentences"
         android:layout_marginStart="100dp"
         android:hint="Surname*"
         android:textColor="@color/white"
