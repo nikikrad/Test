@@ -20,7 +20,7 @@ open class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportFragmentManager.beginTransaction()
-            .replace(binding.container.id, NewFragment())
+            .replace(binding.container.id, LastFragment())
             .addToBackStack(null)
             .commit()
 
@@ -68,9 +68,9 @@ open class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onDestroy() {// TODO выключить приложение при нажатии на кнопку
-        super.onDestroy()
-    }
+//    override fun onDestroy() {// TODO выключить приложение при нажатии на кнопку
+//        super.onDestroy()
+//    }
 
 
     }
