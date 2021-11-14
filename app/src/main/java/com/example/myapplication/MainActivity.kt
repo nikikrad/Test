@@ -41,25 +41,25 @@ open class MainActivity : AppCompatActivity() {
 
         openFragment(LastFragment())
 
-        val workerList = listOf(
-            Worker("Nikitos", "Shurikov"),
-            Worker("Oleg", "Shurikov"),
-            Worker("Djimichu", "Shurikov"),
-            Worker("Anton", "Shurikov"),
-            Worker("CJ", "Shurikov"),
-            Worker("Nikitos", "Kopatich"),
-            Worker("Den", "Shurikov"),
-            Worker("Artem", "Shurikov"),
-            Worker("Max", "Shurikov"),
-            Worker("Nikitos", "Sinyaga"),
-            Worker("Nikitos", "Skurach"),
-            Worker("Nikitos", "Maruev"),
-
-        )
-
-        val workersAdapter = WorkersAdapter(workerList)
-        binding.rvWorkers?.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.rvWorkers.adapter = workersAdapter
+//        val workerList = listOf(
+//            Worker("Nikitos", "Shurikov"),
+//            Worker("Oleg", "Shurikov"),
+//            Worker("Djimichu", "Shurikov"),
+//            Worker("Anton", "Shurikov"),
+//            Worker("CJ", "Shurikov"),
+//            Worker("Nikitos", "Kopatich"),
+//            Worker("Den", "Shurikov"),
+//            Worker("Artem", "Shurikov"),
+//            Worker("Max", "Shurikov"),
+//            Worker("Nikitos", "Sinyaga"),
+//            Worker("Nikitos", "Skurach"),
+//            Worker("Nikitos", "Maruev"),
+//
+//        )
+//
+//        val workersAdapter = WorkersAdapter(workerList)
+//        binding.rvWorkers.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+//        binding.rvWorkers.adapter = workersAdapter
 
 //        Glide
 //            .with(this)

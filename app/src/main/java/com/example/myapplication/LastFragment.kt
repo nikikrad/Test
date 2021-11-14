@@ -25,25 +25,11 @@ class LastFragment: Fragment() {
 
 //    val newContainer = newBinding?.container не использовать
 
+    var workerList = listOf(Worker())
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 
-
-        val workerList = listOf(
-            Worker("Nikitos", "Shurikov"),
-            Worker("Oleg", "Shurikov"),
-            Worker("Djimichu", "Shurikov"),
-            Worker("Anton", "Shurikov"),
-            Worker("CJ", "Shurikov"),
-            Worker("Nikitos", "Kopatich"),
-            Worker("Den", "Shurikov"),
-            Worker("Artem", "Shurikov"),
-            Worker("Max", "Shurikov"),
-            Worker("Nikitos", "Sinyaga"),
-            Worker("Nikitos", "Skurach"),
-            Worker("Nikitos", "Maruev"),
-
-            )
 
         val workersAdapter = WorkersAdapter(workerList)
         binding?.rvWorkers?.layoutManager = LinearLayoutManager(activity?.applicationContext, LinearLayoutManager.VERTICAL, false)

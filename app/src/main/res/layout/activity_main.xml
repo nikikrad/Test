@@ -30,6 +30,7 @@
         android:layout_width="100dp"
         android:background="#DC1F96"
         android:layout_height="60dp"
+        android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="5dp"

@@ -26,8 +26,11 @@ class NewFragment:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         binding?.btn?.setOnClickListener {
-
             (activity as? MainActivity)?.openFragment(LastFragment())
+        }
+
+        binding?.tvName?.setOnEditorActionListener {
+
         }
 
 

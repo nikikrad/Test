@@ -1,75 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    android:background="@color/lite_blue"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dark_gray"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/appCompatEditText"
-        android:layout_width="200dp"
-        android:layout_marginTop="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="100dp"
-        android:inputType="textCapSentences"
-        android:hint="Name*"
-        android:textColor="@color/white"
-        android:textColorHint="@color/green" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/appCompatEditText2"
+        android:id="@+id/tvName"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="150dp"
-        android:inputType="textCapSentences"
-        android:layout_marginStart="100dp"
-        android:hint="Surname*"
         android:textColor="@color/white"
-        android:textColorHint="@color/green" />
+        android:textColorHint="@color/green"
+        android:hint="First Name*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/tvSurname"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/green"
+        android:hint="Last Name*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintVertical_bias="0.057" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText3"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginStart="100dp"
         android:textColor="@color/white"
         android:textColorHint="@color/green"
         android:hint="Email*"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSurname"
+        app:layout_constraintVertical_bias="0.069" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText4"
         android:layout_width="200dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="250dp"
         android:layout_height="50dp"
         android:textColor="@color/white"
         android:textColorHint="@color/green"
         android:hint="Number*"
-        android:inputType="phone" />
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSurname"
+        app:layout_constraintVertical_bias="0.263" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText5"
         android:layout_width="200dp"
-        android:layout_marginStart="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="300dp"
         android:textColor="@color/white"
         android:textColorHint="@color/green"
         android:hint="Password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText3"
+        app:layout_constraintVertical_bias="0.321" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn"
-        android:layout_marginStart="130dp"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:layout_marginTop="500dp"
         android:background="#7BDD7F"
         android:text="Regitrate"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatEditText5"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/appCompatEditText5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
