@@ -13,6 +13,9 @@ class LastFragment: Fragment() {
 
     private var binding: FragmentLastBinding? = null
     private var newBinding: ActivityMainBinding? = null
+    var bundle: Bundle? = this.arguments
+    lateinit var Name: String
+    lateinit var Surname: String
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,15 +28,19 @@ class LastFragment: Fragment() {
 
 //    val newContainer = newBinding?.container не использовать
 
-    var workerList = listOf(Worker())
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        Name = bundle?.getString(Name, toString()) ?: ""
+
+        var workerList = listOf(Worker())
 
 
         val workersAdapter = WorkersAdapter(workerList)
         binding?.rvWorkers?.layoutManager = LinearLayoutManager(activity?.applicationContext, LinearLayoutManager.VERTICAL, false)
         binding?.rvWorkers?.adapter = workersAdapter
+
+
 
 
 
