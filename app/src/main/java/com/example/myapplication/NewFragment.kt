@@ -12,7 +12,6 @@ import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.databinding.FragmentLastBinding
 import com.example.myapplication.databinding.FragmentNewBinding
 import java.util.jar.Attributes
-import com.example.myapplication.NewFragment.OnFragmentChangedListener
 import java.lang.ClassCastException
 
 
