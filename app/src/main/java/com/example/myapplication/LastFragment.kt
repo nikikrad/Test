@@ -13,9 +13,13 @@ class LastFragment: Fragment() {
 
     private var binding: FragmentLastBinding? = null
     private var newBinding: ActivityMainBinding? = null
-    var bundle: Bundle? = this.arguments
-    lateinit var Name: String
-    lateinit var Surname: String
+    lateinit var name: String
+    lateinit var surname: String
+    companion object {
+        const val NAME = "NAME"
+        const val SURNAME = "SURNAME"
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,10 +34,11 @@ class LastFragment: Fragment() {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        var bundle: Bundle? = this.arguments
+        name = bundle?.getString(NAME, "Хуй").toString()
+        surname = bundle?.getString(SURNAME, "Хуй 2") ?: ""
 
-        Name = bundle?.getString(Name, toString()) ?: ""
-
-        var workerList = listOf(Worker())
+        var workerList = listOf(Worker(name, surname))
 
 
         val workersAdapter = WorkersAdapter(workerList)
